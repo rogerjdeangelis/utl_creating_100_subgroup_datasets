@@ -128,3 +128,22 @@ when (18) output data18 ;
 when (19) output data19 ;
 when (20) output data20 ;
 
+*                _              _       _
+ _ __ ___   __ _| | _____    __| | __ _| |_ __ _
+| '_ ` _ \ / _` | |/ / _ \  / _` |/ _` | __/ _` |
+| | | | | | (_| |   <  __/ | (_| | (_| | || (_| |
+|_| |_| |_|\__,_|_|\_\___|  \__,_|\__,_|\__\__,_|
+
+;
+data have;
+  call streaminit(5731);
+  do grp=1 to 20;
+     val=int(100*rand("Uniform"));
+     output;
+     val=int(100*rand("Uniform"));
+     output;
+     val=int(100*rand("Uniform"));
+     output;
+  end;
+run;quit;
+
